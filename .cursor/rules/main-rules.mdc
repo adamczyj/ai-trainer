@@ -1,0 +1,154 @@
+# Cursor Programming Rules
+
+## 🎯 General AI Collaboration Principles
+
+### Communication with AI
+- Always use clear and precise language in comments and descriptions
+- Describe intentions, not just implementation
+- Use English in code and comments.
+- Add context to tasks - explain "why", not just "what"
+- Communicate with AI in English only.
+
+### Code Structure
+- Use TypeScript for this project
+- Write modular and reusable code
+- Follow Single Responsibility Principle
+- Use meaningful variable and function names
+- Group related functionality in separate files/modules
+- Export as less function, variables from TypeScript files as possible.
+
+## 💻 Best Coding Practices
+
+### Comments and Documentation
+- Add docstrings to all functions and classes
+- Use comments to explain "why", not "what"
+- Document complex algorithms and business decisions
+- Keep README.md updated with installation and setup instructions
+
+### Code Formatting
+- Use consistent formatting (prettier, black, gofmt, etc.)
+- Maximum line length: 80-120 characters
+- Use meaningful indentation (2-4 spaces)
+- Group and sort imports alphabetically
+
+### Naming Conventions
+- Use camelCase for variables and functions
+- Use PascalCase for classes and constructors
+- Use UPPER_SNAKE_CASE for constants
+- Use descriptive names that explain purpose
+- Avoid abbreviations unless widely understood
+
+## 🔧 Development Workflow
+
+### File Organization
+- Keep related files close together
+- Use clear directory structure
+- Separate concerns (models, views, controllers, etc.)
+- Group utilities and helpers logically
+- Don't create testing scripts without asking user first.
+
+### Error Handling
+- Always handle potential errors gracefully
+- Use try-catch blocks appropriately
+- Provide meaningful error messages
+- Log errors for debugging purposes
+
+### Testing
+- Write tests for critical functionality
+- Use descriptive test names
+- Follow AAA pattern (Arrange, Act, Assert)
+- Keep tests simple and focused
+
+## 🚀 Performance and Security
+
+### Performance
+- Optimize for readability first, performance second
+- Use appropriate data structures
+- Avoid premature optimization
+- Profile code when performance issues arise
+
+### Security
+- Validate all inputs
+- Use parameterized queries for database operations
+- Never expose sensitive information in logs or errors
+- Follow OWASP security guidelines
+
+## 📝 Code Review Guidelines
+
+### Before Submitting Code
+- Self-review your code
+- Ensure all tests pass
+- Check for code style consistency
+- Remove debug code and console.logs
+- Update documentation if needed
+
+### Review Checklist
+- Is the code readable and well-documented?
+- Are there any obvious bugs or issues?
+- Is the code following established patterns?
+- Are there any security concerns?
+- Is the performance acceptable?
+
+## 🎨 UI/UX Guidelines (if applicable)
+
+### User Interface
+- Design for accessibility
+- Use consistent styling and spacing
+- Provide clear feedback for user actions
+- Ensure responsive design
+- Follow platform-specific design guidelines
+
+### User Experience
+- Make interfaces intuitive and easy to use
+- Provide clear navigation and information hierarchy
+- Handle loading states gracefully
+- Give users control and freedom
+
+## 🔄 Version Control
+
+### Git Practices
+- Write clear, descriptive commit messages
+- Use conventional commit format when possible
+- Keep commits atomic and focused
+- Use meaningful branch names
+- Review changes before merging
+
+### Commit Message Format
+```
+type(scope): description
+
+[optional body]
+
+[optional footer]
+```
+
+## 📚 Learning and Improvement
+
+### Continuous Learning
+- Stay updated with best practices
+- Learn from code reviews
+- Experiment with new technologies safely
+- Share knowledge with team members
+
+### Code Quality
+- Strive for clean, maintainable code
+- Refactor when necessary
+- Learn from mistakes and improve
+- Ask for help when stuck
+
+## 🤖 AI-Specific Guidelines
+
+### Working with Cursor AI
+- Always communicate in English
+- Provide clear context and requirements
+- Break down complex tasks into smaller parts
+- Review and understand AI-generated code
+- Don't blindly accept AI suggestions - validate them
+
+### Code Generation
+- Specify the programming language clearly
+- Include relevant dependencies and imports
+- Mention any specific frameworks or libraries
+- Provide examples of expected input/output when relevant
+
+Remember: The goal is to write code that is not only functional but also maintainable, readable, and collaborative-friendly. 

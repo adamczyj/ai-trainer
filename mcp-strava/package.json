@@ -1,0 +1,69 @@
+{
+  "name": "strava-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for Strava API integration",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc && tsc-alias",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "watch": "tsx watch src/index.ts",
+    "clean": "rm -rf dist",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:verbose": "jest --verbose",
+    "test:debug": "jest --detectOpenHandles --forceExit",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "generate:strava-client": "openapi-generator-cli generate -i https://developers.strava.com/swagger/swagger.json -g typescript-axios -o ./src/generated/strava-client --additional-properties=supportsES6=true,withInterfaces=true --skip-validate-spec",
+    "test:strava-client": "tsx scripts/test-strava-client.ts",
+    "example:strava-client": "tsx src/examples/stravaClientUsage.ts",
+    "debug:tokens": "tsx scripts/debug-strava-tokens.ts",
+    "get:tokens": "tsx scripts/get-strava-tokens.ts",
+    "oauth:server": "cross-env LOGGER_TYPE=stdio tsx scripts/oauth-server.ts",
+    "debug:oauth": "cross-env LOGGER_TYPE=stdio node --inspect-brk -r tsx/register scripts/oauth-server.ts",
+    "debug:oauth-simple": "tsx scripts/debug-oauth.ts",
+    "test:tools": "tsx scripts/test-mcp-tools.ts",
+    "example:tools": "tsx src/examples/mcpToolsExample.ts",
+    "inspector": "npm run build && mcp-inspector --config mcp-inspector-config.json --server strava-mcp",
+    "inspector:cli": "npm run build && mcp-inspector --config mcp-inspector-config.json --server strava-mcp --cli",
+    "start:prod": "npm run build && cross-env NODE_ENV=production LOG_LEVEL=info LOGS_PATH=./logs TOKENS_FILE_PATH=./tokens/strava-tokens.json node dist/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "strava",
+    "api",
+    "typescript",
+    "node"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.2",
+    "axios": "^1.11.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/inspector": "^0.16.2",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.1.0",
+    "@typescript-eslint/eslint-plugin": "^8.38.0",
+    "@typescript-eslint/parser": "^8.38.0",
+    "cross-env": "^10.0.0",
+    "eslint": "^9.32.0",
+    "jest": "^30.0.5",
+    "open": "^10.2.0",
+    "ts-jest": "^29.4.1",
+    "tsc-alias": "^1.8.16",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

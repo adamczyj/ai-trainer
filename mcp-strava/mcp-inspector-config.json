@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "strava-mcp": {
+      "command": "node",
+      "args": ["./dist/index.js"],
+      "env": {
+        "NODE_ENV": "development",
+        "LOG_LEVEL": "debug",
+        "LOGS_PATH": "./logs",
+        "TOKENS_FILE_PATH": "./tokens/strava-tokens.json"
+      }
+    }
+  }
+} 

@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "strava": {
+      "command": "npx",
+      "args": ["tsx", "/Users/jarek/src/strava-mcp/src/index.ts"],
+      "env": {
+        "NODE_ENV": "production",
+        "LOG_LEVEL": "info",
+        "LOGS_PATH": "/Users/jarek/src/strava-mcp/logs",
+        "TOKENS_FILE_PATH": "/Users/jarek/src/strava-mcp/tokens/strava-tokens.json"
+      }
+    }
+  }
+} 
