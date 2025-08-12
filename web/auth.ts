@@ -13,7 +13,6 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       clientId: process.env.AUTH_STRAVA_ID!,
       clientSecret: process.env.AUTH_STRAVA_SECRET!,
       profile(profile) {
-        console.log('Strava profile:', profile)
         return {
           id: profile.id.toString(), // Convert numeric ID to string
           name: `${profile.firstname} ${profile.lastname}`,
@@ -25,10 +24,6 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   ],
   callbacks: {
     async jwt({ token, user, account }) {
-      console.log('JWT callback - token:', token)
-      console.log('JWT callback - user:', user)
-      console.log('JWT callback - account:', account)
-      
       // Persist the user ID to the token
       if (user) {
         token.userId = user.id
@@ -36,9 +31,6 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       return token
     },
     async session({ session, token }) {
-      console.log('Session callback - session:', session)
-      console.log('Session callback - token:', token)
-      
       // Add user ID from token to session
       if (session.user && token.userId) {
         session.user.id = token.userId as string
