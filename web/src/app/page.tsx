@@ -2,7 +2,7 @@ import Header from '@/components/Header/Header'
 
 export default function Home() {
   return (
-    <main>
+    <main className="min-h-screen bg-white">
       <Header />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="text-center">
@@ -13,7 +13,7 @@ export default function Home() {
             Your intelligent companion for Strava training analysis and insights
           </p>
           
-          <div className="bg-green-50 border border-green-200 rounded-lg p-6 max-w-2xl mx-auto">
+          <div className="bg-green-50 border border-green-200 rounded-lg p-6 max-w-2xl mx-auto mb-8">
             <h2 className="text-2xl font-semibold text-green-800 mb-4">
               ✅ Setup Complete!
             </h2>
@@ -25,7 +25,7 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="mt-8 bg-blue-50 border border-blue-200 rounded-lg p-6 max-w-2xl mx-auto">
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 max-w-2xl mx-auto">
             <h2 className="text-2xl font-semibold text-blue-800 mb-4">
               🔧 Next Steps
             </h2>
