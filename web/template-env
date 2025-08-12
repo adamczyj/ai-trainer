@@ -1,0 +1,4 @@
+AUTH_SECRET=your_random_secret
+AUTH_STRAVA_ID=your_strava_client_id
+AUTH_STRAVA_SECRET=your_strava_client_secret
+DATABASE_URL=your_neon_connection_string

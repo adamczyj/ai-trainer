@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@auth/core": "^0.40.0",
-    "@auth/nextjs": "^0.0.0-380f8d56",
     "@auth/prisma-adapter": "^2.10.0",
     "@neondatabase/serverless": "^1.0.1",
     "@prisma/client": "^6.14.0",
