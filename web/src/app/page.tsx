@@ -1,4 +1,7 @@
+"use client"
+
 import Header from '@/components/Header/Header'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -25,7 +28,7 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 max-w-2xl mx-auto">
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 max-w-2xl mx-auto mb-8">
             <h2 className="text-2xl font-semibold text-blue-800 mb-4">
               🔧 Next Steps
             </h2>
@@ -35,6 +38,30 @@ export default function Home() {
               <p>• Test Strava OAuth flow</p>
               <p>• Integrate with existing Strava client</p>
             </div>
+          </div>
+          
+          <div className="flex justify-center space-x-4">
+            <Link
+              href="/test"
+              className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold text-lg transition-colors shadow-md hover:shadow-lg"
+            >
+              🧪 Go to Test Page
+            </Link>
+            
+            <button
+              onClick={async () => {
+                try {
+                  const response = await fetch('/api/health')
+                  const data = await response.json()
+                  alert(`Health Check: ${data.status}\nMessage: ${data.message}\nTime: ${data.timestamp}`)
+                } catch (error) {
+                  alert(`Health Check Failed: ${error}`)
+                }
+              }}
+              className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold text-lg transition-colors shadow-md hover:shadow-lg"
+            >
+              🏥 Health Check
+            </button>
           </div>
         </div>
       </div>
